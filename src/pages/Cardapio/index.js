@@ -125,8 +125,8 @@ function Cardapio() {
         </button>
       </div>
       <BarraCardapio
-        tempo={restaurante.valor_minimo_pedido}
-        preco={restaurante.taxa_entrega}
+        tempo={restaurante.tempo_entrega_minutos}
+        preco={restaurante.valor_minimo_pedido}
         descricao={restaurante.descricao ?? ''}
       />
       <div className={classes.restaurantesContainer}>
