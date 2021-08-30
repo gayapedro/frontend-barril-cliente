@@ -1,0 +1,110 @@
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  containerPaginaProdutos: {},
+  botoesVoltarRevisar: {
+    position: 'absolute',
+    right: 80,
+    top: 220,
+    display: 'flex',
+    gap: 20,
+    '& > button': {
+      all: 'unset',
+      padding: '11px 40px',
+      borderRadius: 20,
+      backgroundColor: '#D13201',
+      fontFamily: 'Montserrat',
+      fontSize: 14,
+      color: 'white',
+      fontWeight: 600,
+      zIndex: 5,
+      cursor: 'pointer',
+      '&:disabled': {
+        backgroundColor: 'grey',
+        cursor: 'not-allowed',
+      },
+    },
+  },
+  restaurantesContainer: {
+    boxSizing: 'border-box',
+    position: 'relative',
+    width: '100%',
+    padding: '30px 112px',
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: 30,
+    '& > *': {
+      width: 'calc(50% - 15px)',
+    },
+    '& > input': {
+      fontFamily: 'Montserrat',
+      width: 488,
+      height: 40,
+      padding: '0 33px',
+      position: 'absolute',
+      top: 50,
+      right: 100,
+      backgroundColor: '#F5F5F5',
+      boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+      borderRadius: 20,
+      boxSizing: 'border-box',
+      border: 'none',
+      '&:focus': {
+        outline: 'none',
+      },
+    },
+  },
+  backdrop: {
+    position: 'absolute',
+    zIndex: 5,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    display: 'grid',
+    placeContent: 'center',
+  },
+  noBackdrop: {
+    display: 'none',
+  },
+  semRestaurantes: {
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop: 100,
+    '& > img': {
+      height: 50,
+    },
+    '& > p': {
+      fontFamily: 'Montserrat',
+      fontSize: 18,
+      color: '#D13201',
+    },
+  },
+  semProdutos: {
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 48,
+    '& img': {
+      height: 216,
+    },
+    '& p': {
+      margin: 0,
+      padding: 0,
+      color: '#525459',
+      fontSize: 20,
+      fontWeight: 600,
+      fontFamily: 'Montserrat',
+    },
+  },
+}));
+
+export default useStyles;
